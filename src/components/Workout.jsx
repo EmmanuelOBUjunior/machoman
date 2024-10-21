@@ -1,6 +1,6 @@
 
 export default function Workout() {
   return (
-    <div>Workout</div>
+    <h1>Workout</h1>
   )
 }
