@@ -1,5 +1,6 @@
 import Generator from "./components/Generator"
 import Hero from "./components/Hero"
+import Workout from "./components/Workout"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <main>
       <Hero/>
       <Generator/>
+      <Workout/>
     </main>
   )
 }
