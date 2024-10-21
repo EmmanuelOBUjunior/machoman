@@ -1,6 +1,6 @@
 
 export default function Generator() {
   return (
-    <div>Generator</div>
+    <h1>Generator</h1>
   )
 }
