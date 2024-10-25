@@ -1,6 +1,9 @@
 
 export default function Hero() {
   return (
-    <h1>Hero</h1>
+    <div>
+      <p>IT&apos;S TIME TO BE A</p>
+      <h1>Macho<span>Man</span></h1>
+    </div>
   )
 }
