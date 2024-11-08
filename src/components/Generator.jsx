@@ -3,7 +3,7 @@ import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 
 function Header(props) {
-  const {title, description, index} = props;
+  const { title, description, index } = props;
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center  justify-center gap-2">
