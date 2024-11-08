@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types"
 function SectionWrapper({children, title, header}) {
   return (
     <section className="min-h-screen flex flex-col gap-10">
@@ -14,3 +14,10 @@ function SectionWrapper({children, title, header}) {
 }
 
 export default SectionWrapper
+
+
+SectionWrapper.propTypes = {
+    children: PropTypes.func.isRequired,
+    title: PropTypes.array.isRequired,
+    header: PropTypes.string.isRequired,
+}
