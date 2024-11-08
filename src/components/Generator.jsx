@@ -40,8 +40,8 @@ export default function Generator() {
         })}
       </div>
       <Header
-        index={"01"}
-        title={"Pick your poison"}
+        index={"02"}
+        title={"Lock on targets"}
         description={"Select the workout you wish to endure"}
       />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
