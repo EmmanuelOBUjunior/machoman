@@ -45,7 +45,7 @@ export default function Generator() {
         description={"Select the muscles judged for annihilation."}
       />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        
+        <p>Select muscle groups</p>
       </div>
     </SectionWrapper>
   );
