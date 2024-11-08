@@ -45,7 +45,7 @@ export default function Generator() {
         description={"Select the muscles judged for annihilation."}
       />
       <div className="bg-slate-950 p-3 border border-solid border-blue-400 rounded-lg">
-      <div className="">
+      <div className="flex items-center">
         <p>Select muscle groups</p>
         <i className="fa-solid fa-caret-down"></i>
       </div>
