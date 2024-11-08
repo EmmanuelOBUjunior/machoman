@@ -2,7 +2,8 @@ import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 import PropTypes from "prop-types";
 
-function Header({ index, title, description }) {
+function Header(props) {
+  const {title, description, index} = props;
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center  justify-center gap-2">
@@ -42,7 +43,7 @@ export default function Generator() {
   );
 }
 
-Header.PropTypes = {
+const myPropTypes = {
   index: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
