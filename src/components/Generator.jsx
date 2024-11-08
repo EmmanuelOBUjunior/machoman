@@ -3,8 +3,8 @@ import SectionWrapper from "./SectionWrapper";
 
 function Header({index, title, description}){
   return(
-    <div>
-      <div>
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center gap-2">
         <p>{index}</p>
         <h4>{title}</h4>
       </div>
