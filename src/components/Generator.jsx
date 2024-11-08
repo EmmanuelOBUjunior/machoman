@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
-import PropTypes from "prop-types";
 
 function Header(props) {
   const {title, description, index} = props;
@@ -41,10 +41,4 @@ export default function Generator() {
       </div>
     </SectionWrapper>
   );
-}
-
-Header.PropTypes = {
-  index: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
 }
