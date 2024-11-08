@@ -34,7 +34,7 @@ export default function Generator() {
               key={typeIndex}
               className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
             >
-              <p className="capitalize">{type}</p>
+              <p className="capitalize">{type.replaceAll("_", " ")}</p>
             </button>
           );
         })}
