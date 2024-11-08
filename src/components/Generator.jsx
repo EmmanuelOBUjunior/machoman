@@ -1,5 +1,6 @@
 import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
+import PropTypes from "prop-types";
 
 function Header({ index, title, description }) {
   return (
@@ -39,4 +40,10 @@ export default function Generator() {
       </div>
     </SectionWrapper>
   );
+}
+
+Header.PropTypes = {
+  index: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
