@@ -1,3 +1,4 @@
+import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 
 
@@ -16,6 +17,13 @@ export default function Generator() {
   return (
     <SectionWrapper title={["It's", "Huge", "o'clock"]} header={"generate your workout"}>
         <Header index={"01"} title={"Pick your poison"} description={"Select the workout you wish to endure"}/>
+        {Object.keys(WORKOUTS).map((type, typeIndex)=>{
+          return(
+            <button key={typeIndex}>
+              <p>{type}</p>
+            </button>
+          )
+        })}
     </SectionWrapper>
   )
 }
