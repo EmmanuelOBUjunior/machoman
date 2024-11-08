@@ -44,7 +44,7 @@ export default function Generator() {
         title={"Lock on targets"}
         description={"Select the muscles judged for annihilation."}
       />
-      <div className="bg-slate-950 py-3 border border-solid border-blue-400 rounded-lg">
+      <div className="bg-slate-950 p-3 border border-solid border-blue-400 rounded-lg">
       <div className="">
         <p>Select muscle groups</p>
         <i className="fa-solid fa-caret-down"></i>
