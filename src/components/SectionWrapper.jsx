@@ -1,7 +1,7 @@
 
 function SectionWrapper({children, title, header}) {
   return (
-    <section>SectionWrapper</section>
+    <section>{children}</section>
   )
 }
 
