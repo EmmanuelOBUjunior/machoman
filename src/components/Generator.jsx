@@ -46,6 +46,7 @@ export default function Generator() {
       />
       <div className="">
         <p>Select muscle groups</p>
+        <i className="fa-solid fa-caret-down"></i>
       </div>
     </SectionWrapper>
   );
