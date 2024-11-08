@@ -15,7 +15,7 @@ function Header({index, title, description}){
 export default function Generator() {
   return (
     <SectionWrapper title={["It's", "Huge", "o'clock"]} header={"generate your workout"}>
-        <Header/>
+        <Header index={"01"} title={"Pick your poison"} description={"Select the workout you wish to endure"}/>
     </SectionWrapper>
   )
 }
