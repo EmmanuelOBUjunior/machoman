@@ -17,6 +17,7 @@ export default function Generator() {
   return (
     <SectionWrapper title={["It's", "Huge", "o'clock"]} header={"generate your workout"}>
         <Header index={"01"} title={"Pick your poison"} description={"Select the workout you wish to endure"}/>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {Object.keys(WORKOUTS).map((type, typeIndex)=>{
           return(
             <button key={typeIndex}>
@@ -24,6 +25,7 @@ export default function Generator() {
             </button>
           )
         })}
+        </div>
     </SectionWrapper>
   )
 }
