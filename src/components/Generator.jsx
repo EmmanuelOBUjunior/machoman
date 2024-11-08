@@ -43,7 +43,7 @@ export default function Generator() {
   );
 }
 
-const myPropTypes = {
+Header.PropTypes = {
   index: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
