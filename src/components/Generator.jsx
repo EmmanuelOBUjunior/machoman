@@ -18,11 +18,11 @@ function Header(props) {
   );
 }
 export default function Generator() {
-  const [toggleModal, setToggleModal] = useState(false)
-  const [poision, setPoision] = useState('individual')
-  const [muscles, setMuscles] = useState([])
-  const [goals, setGoals] = useState('strength_power')
-  
+  const [toggleModal, setToggleModal] = useState(false);
+  const [poision, setPoision] = useState("individual");
+  const [muscles, setMuscles] = useState([]);
+  const [goals, setGoals] = useState("strength_power");
+
   return (
     <SectionWrapper
       title={["It's", "Huge", "o'clock"]}
@@ -37,9 +37,9 @@ export default function Generator() {
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
           return (
             <button
-              onClick={()=> setPoision(type)}
+              onClick={() => setPoision(type)}
               key={typeIndex}
-              className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
+              className={"bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600 " + (type === 'poison'? 'border-blue-400':'border-blue-600')}
             >
               <p className="capitalize">{type.replaceAll("_", " ")}</p>
             </button>
@@ -52,13 +52,14 @@ export default function Generator() {
         description={"Select the muscles judged for annihilation."}
       />
       <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
-        <button onClick={()=>setToggleModal((toggleModal)=> !toggleModal)} className="flex items-center p-3 relative justify-center">
+        <button
+          onClick={() => setToggleModal((toggleModal) => !toggleModal)}
+          className="flex items-center p-3 relative justify-center"
+        >
           <p>Select muscle groups</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
         </button>
-        {toggleModal && (
-          <div>modal</div>
-        )}
+        {toggleModal && <div>modal</div>}
       </div>
       <Header
         index={"03"}
@@ -69,7 +70,6 @@ export default function Generator() {
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
-              onClick={()=>{setPoision(scheme)}}
               key={schemeIndex}
               className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
             >
@@ -81,4 +81,3 @@ export default function Generator() {
     </SectionWrapper>
   );
 }
- 
