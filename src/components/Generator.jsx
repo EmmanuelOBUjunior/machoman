@@ -65,13 +65,13 @@ export default function Generator() {
         description={"Select the workout you wish to endure"}
       />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {Object.keys(SCHEMES).map((type, typeIndex) => {
+        {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
-              key={typeIndex}
+              key={schemeIndex}
               className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
             >
-              <p className="capitalize">{type.replaceAll("_", " ")}</p>
+              <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
             </button>
           );
         })}
