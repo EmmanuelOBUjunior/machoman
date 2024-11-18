@@ -70,8 +70,9 @@ export default function Generator() {
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
+              onClick={() => setPoision(scheme)}
               key={schemeIndex}
-              className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
+              className={'bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 ' + (scheme === poision? ' border-[3px] border-blue-600':' border-blue-400')}
             >
               <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
             </button>
