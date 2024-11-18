@@ -19,6 +19,7 @@ function Header(props) {
 }
 export default function Generator() {
   const [toggleModal, setToggleModal] = useState(false)
+  const [poision, setPoision] = useState('individual')
   
   return (
     <SectionWrapper
