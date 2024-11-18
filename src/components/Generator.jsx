@@ -59,6 +59,7 @@ export default function Generator() {
           <div>modal</div>
         )}
       </div>
+      
     </SectionWrapper>
   );
 }
