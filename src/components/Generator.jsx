@@ -47,7 +47,7 @@ export default function Generator() {
         title={"Lock on targets"}
         description={"Select the muscles judged for annihilation."}
       />
-      <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex">
+      <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
         <button onClick={()=>setToggleModal((toggleModal)=> !toggleModal)} className="flex items-center p-3 relative justify-center">
           <p>Select muscle groups</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
