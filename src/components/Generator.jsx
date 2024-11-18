@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { WORKOUTS } from "../utils/swoldier";
+import { SCHEMES, WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 
 function Header(props) {
@@ -59,7 +59,23 @@ export default function Generator() {
           <div>modal</div>
         )}
       </div>
-      
+      <Header
+        index={"01"}
+        title={"Pick your poison"}
+        description={"Select the workout you wish to endure"}
+      />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {Object.keys(SCHEMES).map((type, typeIndex) => {
+          return (
+            <button
+              key={typeIndex}
+              className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
+            >
+              <p className="capitalize">{type.replaceAll("_", " ")}</p>
+            </button>
+          );
+        })}
+      </div>
     </SectionWrapper>
   );
 }
