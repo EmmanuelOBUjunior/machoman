@@ -37,6 +37,7 @@ export default function Generator() {
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
           return (
             <button
+              onClick={()=> setPoision(type)}
               key={typeIndex}
               className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
             >
@@ -68,6 +69,7 @@ export default function Generator() {
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
+              onClick={()=>{setPoision(scheme)}}
               key={schemeIndex}
               className="bg-slate-950 border-blue-400 border py-3 rounded-lg duration-200 hover:border-blue-600"
             >
