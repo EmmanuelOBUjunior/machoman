@@ -61,8 +61,8 @@ export default function Generator() {
       </div>
       <Header
         index={"03"}
-        title={"Pick your poison"}
-        description={"Select the workout you wish to endure"}
+        title={"Become Juggernaut"}
+        description={"Select your ultimate objective"}
       />
       <div className="grid grid-cols-3 gap-4">
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
