@@ -17,6 +17,7 @@ function Header(props) {
   );
 }
 export default function Generator() {
+  let showModal = true;
   
   return (
     <SectionWrapper
@@ -50,8 +51,11 @@ export default function Generator() {
           <p>Select muscle groups</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
         </div>
-        {}
+        {showModal && (
+          <div>modal</div>
+        )}
       </div>
     </SectionWrapper>
   );
 }
+ 
