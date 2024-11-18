@@ -20,6 +20,8 @@ function Header(props) {
 export default function Generator() {
   const [toggleModal, setToggleModal] = useState(false)
   const [poision, setPoision] = useState('individual')
+  const [muscles, setMuscles] = useState([])
+  const [goals, setGoals] = useState('strength_power')
   
   return (
     <SectionWrapper
