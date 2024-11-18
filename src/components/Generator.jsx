@@ -17,7 +17,7 @@ function Header(props) {
   );
 }
 export default function Generator() {
-  let showModal = true;
+  let showModal = false;
   
   return (
     <SectionWrapper
@@ -47,10 +47,10 @@ export default function Generator() {
         description={"Select the muscles judged for annihilation."}
       />
       <div className="bg-slate-950 p-3 border border-solid border-blue-400 rounded-lg">
-        <div className="flex items-center relative justify-center">
+        <button className="flex items-center relative justify-center">
           <p>Select muscle groups</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
-        </div>
+        </button>
         {showModal && (
           <div>modal</div>
         )}
