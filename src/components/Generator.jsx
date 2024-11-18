@@ -18,7 +18,6 @@ function Header(props) {
   );
 }
 export default function Generator() {
-  let showModal = false;
   const [toggleModal, setToggleModal] = useState(false)
   
   return (
