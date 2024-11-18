@@ -60,11 +60,11 @@ export default function Generator() {
         )}
       </div>
       <Header
-        index={"01"}
+        index={"03"}
         title={"Pick your poison"}
         description={"Select the workout you wish to endure"}
       />
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
