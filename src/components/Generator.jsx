@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 
@@ -18,6 +19,7 @@ function Header(props) {
 }
 export default function Generator() {
   let showModal = false;
+  const [toggleModal, setToggleModal] = useState(false)
   
   return (
     <SectionWrapper
@@ -47,11 +49,11 @@ export default function Generator() {
         description={"Select the muscles judged for annihilation."}
       />
       <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg">
-        <button className="flex items-center p-3 relative justify-center">
+        <button onClick={()=>setToggleModal((toggleModal)=> !toggleModal)} className="flex items-center p-3 relative justify-center">
           <p>Select muscle groups</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
         </button>
-        {showModal && (
+        {toggleModal && (
           <div>modal</div>
         )}
       </div>
