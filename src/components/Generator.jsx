@@ -92,7 +92,7 @@ export default function Generator() {
                   className={
                     "hover:text-blue-600 duration-200 " +
                     muscles.includes(muscleGroup)
-                      ? " text-blue-600"
+                      ? " text-blue-400"
                       : " "
                   }
                   key={muscleGroupIndex}
