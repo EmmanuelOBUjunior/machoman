@@ -32,11 +32,11 @@ export default function Generator() {
       return;
     }
     if (muscles.includes(muscleGroup)) {
-      setMuscles(muscles.filter(val => val !== muscleGroup));
+      setMuscles(muscles.filter((val) => val !== muscleGroup));
       return;
     }
 
-    setMuscles([...muscles, muscleGroup])
+    setMuscles([...muscles, muscleGroup]);
   }
 
   return (
@@ -88,7 +88,7 @@ export default function Generator() {
             ).map((muscleGroup, muscleGroupIndex) => {
               return (
                 <button
-                  onClick={()=>updateMuscles(muscleGroup)}
+                  onClick={() => updateMuscles(muscleGroup)}
                   className={
                     "hover:text-blue-600 duration-200 " +
                     muscles.includes(muscleGroup)
