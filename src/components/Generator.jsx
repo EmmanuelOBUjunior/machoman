@@ -35,6 +35,8 @@ export default function Generator() {
       setMuscles(muscles.filter((val) => val !== muscleGroup));
       return;
     }
+
+    setMuscles(...muscles, muscleGroup)
   }
 
   return (
