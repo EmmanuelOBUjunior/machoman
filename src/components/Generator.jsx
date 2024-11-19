@@ -23,18 +23,17 @@ export default function Generator() {
   const [muscles, setMuscles] = useState([]);
   const [goal, setGoal] = useState("strength_power");
 
-
-  function updateMuscles(muscleGroup){
-    if(muscles.length > 2){
-      return
+  function updateMuscles(muscleGroup) {
+    if (muscles.length > 2) {
+      return;
     }
-    if(poision !== 'individual'){
-      setMuscles(muscleGroup)
-      return
+    if (poision !== "individual") {
+      setMuscles(muscleGroup);
+      return;
     }
-    if(muscles.includes(muscleGroup)){
-      setMuscles(muscles.filter(val => val !== muscleGroup))
-      return
+    if (muscles.includes(muscleGroup)) {
+      setMuscles(muscles.filter((val) => val !== muscleGroup));
+      return;
     }
   }
 
@@ -54,7 +53,12 @@ export default function Generator() {
             <button
               onClick={() => setPoision(type)}
               key={typeIndex}
-              className={'bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 ' + (type === poision? ' border-[3px] border-blue-600':' border-blue-400')}
+              className={
+                "bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 " +
+                (type === poision
+                  ? " border-[3px] border-blue-600"
+                  : " border-blue-400")
+              }
             >
               <p className="capitalize">{type.replaceAll("_", " ")}</p>
             </button>
@@ -76,11 +80,24 @@ export default function Generator() {
         </button>
         {toggleModal && (
           <div className="flex flex-col px-3 pb-3">
-            {(poision === 'individual'? WORKOUTS[poision]: Object.keys(WORKOUTS[poision])).map((muscleGroup, muscleGroupIndex)=>{
-              return(
-                <button onClick={updateMuscles(muscleGroup)}className={"hover:text-blue-600 duration-200 "+ (muscles.includes(muscleGroup)) ?" text-blue-600":" "} key={muscleGroupIndex}><p>
-                  {muscleGroup.replace('_',' ').toUpperCase()}</p></button>
-              )
+            {(poision === "individual"
+              ? WORKOUTS[poision]
+              : Object.keys(WORKOUTS[poision])
+            ).map((muscleGroup, muscleGroupIndex) => {
+              return (
+                <button
+                  onClick={updateMuscles(muscleGroup)}
+                  className={
+                    "hover:text-blue-600 duration-200 " +
+                    muscles.includes(muscleGroup)
+                      ? " text-blue-600"
+                      : " "
+                  }
+                  key={muscleGroupIndex}
+                >
+                  <p>{muscleGroup.replace("_", " ").toUpperCase()}</p>
+                </button>
+              );
             })}
           </div>
         )}
@@ -96,7 +113,12 @@ export default function Generator() {
             <button
               onClick={() => setGoal(scheme)}
               key={schemeIndex}
-              className={'bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 ' + (scheme === goal ? ' border-[3px] border-blue-600':' border-blue-400')}
+              className={
+                "bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 " +
+                (scheme === goal
+                  ? " border-[3px] border-blue-600"
+                  : " border-blue-400")
+              }
             >
               <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
             </button>
