@@ -88,7 +88,7 @@ export default function Generator() {
             ).map((muscleGroup, muscleGroupIndex) => {
               return (
                 <button
-                  onClick={updateMuscles(muscleGroup)}
+                  onClick={()=>updateMuscles(muscleGroup)}
                   className={
                     "hover:text-blue-600 duration-200 " +
                     muscles.includes(muscleGroup)
