@@ -23,6 +23,16 @@ export default function Generator() {
   const [muscles, setMuscles] = useState([]);
   const [goal, setGoal] = useState("strength_power");
 
+
+  function updateMuscles(muscleGroup){
+    if(muscles.length > 2){
+      return
+    }
+    if(poision !== 'individual'){
+      setMuscles(muscleGroup)
+    }
+  }
+
   return (
     <SectionWrapper
       title={["It's", "Huge", "o'clock"]}
@@ -63,7 +73,7 @@ export default function Generator() {
           <div className="flex flex-col px-3 pb-3">
             {(poision === 'individual'? WORKOUTS[poision]: Object.keys(WORKOUTS[poision])).map((muscleGroup, muscleGroupIndex)=>{
               return(
-                <button key={muscleGroupIndex}><p>
+                <button onClick={updateMuscles(muscleGroup)}className="hover:text-blue-600 duration-200" key={muscleGroupIndex}><p>
                   {muscleGroup.replace('_',' ').toUpperCase()}</p></button>
               )
             })}
