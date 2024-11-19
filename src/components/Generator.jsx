@@ -21,7 +21,7 @@ export default function Generator() {
   const [toggleModal, setToggleModal] = useState(false);
   const [poision, setPoision] = useState("individual");
   const [muscles, setMuscles] = useState([]);
-  const [goals, setGoals] = useState("strength_power");
+  const [goal, setGoal] = useState("strength_power");
 
   return (
     <SectionWrapper
@@ -70,9 +70,9 @@ export default function Generator() {
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
           return (
             <button
-              onClick={() => setGoals(scheme)}
+              onClick={() => setGoal(scheme)}
               key={schemeIndex}
-              className={'bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 ' + (scheme === poision? ' border-[3px] border-blue-600':' border-blue-400')}
+              className={'bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 ' + (scheme === goal ? ' border-[3px] border-blue-600':' border-blue-400')}
             >
               <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
             </button>
