@@ -78,7 +78,7 @@ export default function Generator() {
           <div className="flex flex-col px-3 pb-3">
             {(poision === 'individual'? WORKOUTS[poision]: Object.keys(WORKOUTS[poision])).map((muscleGroup, muscleGroupIndex)=>{
               return(
-                <button onClick={updateMuscles(muscleGroup)}className="hover:text-blue-600 duration-200" key={muscleGroupIndex}><p>
+                <button onClick={updateMuscles(muscleGroup)}className={"hover:text-blue-600 duration-200 "+ (muscles.includes(muscleGroup)) ?" text-blue-600":" "} key={muscleGroupIndex}><p>
                   {muscleGroup.replace('_',' ').toUpperCase()}</p></button>
               )
             })}
