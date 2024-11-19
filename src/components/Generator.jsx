@@ -36,7 +36,7 @@ export default function Generator() {
       return;
     }
 
-    setMuscles(...muscles, muscleGroup)
+    setMuscles([...muscles, muscleGroup])
   }
 
   return (
