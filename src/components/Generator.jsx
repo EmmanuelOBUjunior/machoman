@@ -97,7 +97,7 @@ export default function Generator() {
                   }
                   key={muscleGroupIndex}
                 >
-                  <p>{muscleGroup.replace("_", " ").toUpperCase()}</p>
+                  <p className="uppercase">{muscleGroup.replace("_", " ")}</p>
                 </button>
               );
             })}
