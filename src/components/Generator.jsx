@@ -63,7 +63,8 @@ export default function Generator() {
           <div className="flex flex-col px-3 pb-3">
             {(poision === 'individual'? WORKOUTS[poision]: Object.keys(WORKOUTS[poision])).map((muscleGroup, muscleGroupIndex)=>{
               return(
-                <button key={muscleGroupIndex}>{muscleGroup.replace('_',' ')}</button>
+                <button key={muscleGroupIndex}><p>
+                  {muscleGroup.replace('_',' ')}</p></button>
               )
             })}
           </div>
