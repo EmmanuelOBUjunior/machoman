@@ -30,6 +30,11 @@ export default function Generator() {
     }
     if(poision !== 'individual'){
       setMuscles(muscleGroup)
+      return
+    }
+    if(muscles.includes(muscleGroup)){
+      setMuscles(muscles.filter(val => val !== muscleGroup))
+      return
     }
   }
 
