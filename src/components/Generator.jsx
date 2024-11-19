@@ -64,7 +64,7 @@ export default function Generator() {
             {(poision === 'individual'? WORKOUTS[poision]: Object.keys(WORKOUTS[poision])).map((muscleGroup, muscleGroupIndex)=>{
               return(
                 <button key={muscleGroupIndex}><p>
-                  {muscleGroup.replace('_',' ')}</p></button>
+                  {muscleGroup.replace('_',' ').toUpperCase()}</p></button>
               )
             })}
           </div>
