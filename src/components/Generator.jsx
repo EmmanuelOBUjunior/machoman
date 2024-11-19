@@ -28,7 +28,7 @@ export default function Generator() {
       setMuscles(muscles.filter((val) => val !== muscleGroup));
       return;
     }
-    if (muscles.length > 2) {
+    if (muscles.length > 3) {
       return;
     }
     if (poison !== "individual") {
