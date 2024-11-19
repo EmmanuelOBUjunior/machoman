@@ -91,9 +91,9 @@ export default function Generator() {
                   onClick={() => updateMuscles(muscleGroup)}
                   className={
                     "hover:text-blue-600 duration-200 " +
-                    muscles.includes(muscleGroup)
+                    (muscles.includes(muscleGroup)
                       ? " text-blue-400"
-                      : " "
+                      : " ")
                   }
                   key={muscleGroupIndex}
                 >
