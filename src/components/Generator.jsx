@@ -32,7 +32,7 @@ export default function Generator() {
       return;
     }
     if (muscles.includes(muscleGroup)) {
-      setMuscles(muscles.filter((val) => val !== muscleGroup));
+      setMuscles(muscles.filter(val => val !== muscleGroup));
       return;
     }
 
