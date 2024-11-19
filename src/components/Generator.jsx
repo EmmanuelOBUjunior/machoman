@@ -28,7 +28,7 @@ export default function Generator() {
       return;
     }
     if (poision !== "individual") {
-      setMuscles(muscleGroup);
+      setMuscles([muscleGroup]);
       return;
     }
     if (muscles.includes(muscleGroup)) {
