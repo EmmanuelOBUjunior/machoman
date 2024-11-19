@@ -19,7 +19,7 @@ function Header(props) {
 }
 export default function Generator() {
   const [toggleModal, setToggleModal] = useState(false);
-  const [poision, setPoision] = useState("individual");
+  const [poison, setPoison] = useState("individual");
   const [muscles, setMuscles] = useState([]);
   const [goal, setGoal] = useState("strength_power");
 
@@ -27,7 +27,7 @@ export default function Generator() {
     if (muscles.length > 2) {
       return;
     }
-    if (poision !== "individual") {
+    if (poison !== "individual") {
       setMuscles([muscleGroup]);
       return;
     }
@@ -53,11 +53,11 @@ export default function Generator() {
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
           return (
             <button
-              onClick={() => setPoision(type)}
+              onClick={() => setPoison(type)}
               key={typeIndex}
               className={
                 "bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 " +
-                (type === poision
+                (type === poison
                   ? " border-[3px] border-blue-600"
                   : " border-blue-400")
               }
@@ -82,9 +82,9 @@ export default function Generator() {
         </button>
         {toggleModal && (
           <div className="flex flex-col px-3 pb-3">
-            {(poision === "individual"
-              ? WORKOUTS[poision]
-              : Object.keys(WORKOUTS[poision])
+            {(poison === "individual"
+              ? WORKOUTS[poison]
+              : Object.keys(WORKOUTS[poison])
             ).map((muscleGroup, muscleGroupIndex) => {
               return (
                 <button
