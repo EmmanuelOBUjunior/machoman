@@ -79,7 +79,7 @@ export default function Generator() {
           onClick={() => setToggleModal((toggleModal) => !toggleModal)}
           className="flex items-center p-3 relative justify-center"
         >
-          <p>{muscles.length `Select muscle groups`}</p>
+          <p>{muscles.length === 0 ? `Select muscle groups` : muscles.join(" ")}</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
         </button>
         {toggleModal && (
