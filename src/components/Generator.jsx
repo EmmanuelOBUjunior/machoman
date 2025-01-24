@@ -55,7 +55,9 @@ export default function Generator() {
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
           return (
             <button
-              onClick={() => setPoison(type)}
+              onClick={() => {
+                setMuscles([]) 
+                setPoison(type)}}
               key={typeIndex}
               className={
                 "bg-slate-950 border py-3 rounded-lg duration-200 hover:border-blue-600 " +
