@@ -38,7 +38,10 @@ export default function Generator() {
     }
 
     setMuscles([...muscles, muscleGroup]);
-    if(muscles.length === 3) setToggleModal(false);
+    if(muscles.length === 2){
+      console.log(muscles)
+      setToggleModal(false);
+    }
   }
 
   return (
